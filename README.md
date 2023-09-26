@@ -1,6 +1,8 @@
 # Noki
 
-This is a generalized tool to create Whatsapp/SMS surveys using Twilio API. More information about the project can be found here: https://share.nuclino.com/p/DESDR-Survey-Tool-yjKGW4mhV8nuGCmHrO5QtQ
+This is a generalized tool to create Whatsapp/SMS surveys using Twilio API. See the demo here: https://youtu.be/_OMRHVFTDAU
+
+More information about the idea can be found here: https://share.nuclino.com/p/DESDR-Survey-Tool-yjKGW4mhV8nuGCmHrO5QtQ
 
 Below are the instructions for running it locally
 
