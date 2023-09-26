@@ -1,0 +1,48 @@
+{
+  "restart_word": "restart",
+  "survey": {
+    "start": {
+      "type": "var",
+      "msgs": [
+        "Hi, what is your name?"
+      ],
+      "next_condition": {
+        "function_name": "get_current_date",
+        "args": [
+          "%m"
+        ],
+        "answer_next_map": {
+          "between,05,07": "weather",
+          "<05": "out of season",
+          ">07": "out of season"
+        }
+      }
+    },
+    "weather": {
+      "type": "mcq",
+      "msgs": [
+        "How is the rainfall? Reply with a selection. For instance if it is above normal, reply with *1*"
+      ],
+      "options": {
+        "1": "Above normal",
+        "2": "Normal",
+        "3": "Below normal"
+      },
+      "next": "greet"
+    },
+    "out of season": {
+      "type": "text",
+      "msgs": [
+        "Please come back during planting season.",
+        "Thank you! Have a great day!"
+      ]
+    },
+    "greet": {
+      "type": "text",
+      "msgs": [
+        "Hello there!",
+        "Thank you! Have a great day!"
+      ]
+    }
+  }
+}

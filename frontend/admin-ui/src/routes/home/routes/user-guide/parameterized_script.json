@@ -1,0 +1,33 @@
+{
+  "restart_word": "restart",
+  "survey": {
+    "start": {
+      "type": "var",
+      "msgs": [
+        "Hi, what is your name?"
+      ],
+      "next": "greet"
+    },
+    "greet": {
+      "type": "text",
+      "msgs": [
+        "Hello %%name%%! It is %%day%% today.",
+        "Hope you are having a great day!"
+      ],
+      "params": {
+        "name": {
+          "function_name": "get_from_response",
+          "args": [
+            "start"
+          ]
+        },
+        "day": {
+          "function_name": "get_current_date",
+          "args": [
+            "%A"
+          ]
+        }
+      }
+    }
+  }
+}

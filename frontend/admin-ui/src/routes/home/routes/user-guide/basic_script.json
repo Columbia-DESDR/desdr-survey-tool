@@ -1,0 +1,19 @@
+{
+  "restart_word": "restart",
+  "survey": {
+    "start": {
+      "type": "var",
+      "msgs": [
+        "Hi, what is your name?"
+      ],
+      "next": "greet"
+    },
+    "greet": {
+      "type": "text",
+      "msgs": [
+        "Hello there!",
+        "Hope you are having a great day!"
+      ]
+    }
+  }
+}

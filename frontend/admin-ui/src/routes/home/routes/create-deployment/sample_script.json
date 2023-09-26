@@ -1,0 +1,54 @@
+{
+  "restart_word": "restart",
+  "survey": {
+    "start": {
+      "type": "var",
+      "msgs": [
+        "Hello there! this is a sample survey",
+        "What is your name?"
+      ],
+      "next": "math_question"
+    },
+    "math_question": {
+      "type": "mcq",
+      "msgs": [
+        "Hello %%s1%%!",
+        "What is 5+5? Reply with a selection. For instance if your answer is 10 send 1, if your answer is -10 send 2"
+      ],
+      "params": {
+        "s1": {
+          "function_name": "get_from_response",
+          "args": [
+            "start"
+          ]
+        }
+      },
+      "options": {
+        "1": "10",
+        "2": "-10",
+        "3": "3"
+      },
+      "next_condition": {
+        "step_name": "math_question",
+        "answer_next_map": {
+          "3": "wrong",
+          "10": "correct",
+          "-10": "wrong"
+        }
+      }
+    },
+    "correct": {
+      "type": "text",
+      "msgs": [
+        "Wow! You are a genius!!",
+        "Have a nice day!"
+      ]
+    },
+    "wrong": {
+      "type": "text",
+      "msgs": [
+        "Oh no! that's wrong!! Better luck next time."
+      ]
+    }
+  }
+}
